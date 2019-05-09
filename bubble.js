@@ -1,4 +1,4 @@
-const a = [6, 2, 3, 7, 99, 0]
+const a = [3, 2, 8, 1, 99]
 console.log("zero", 99 > 0);
 
 
@@ -7,19 +7,20 @@ const bubbleSort = (arr) => {
   let itemTwo = 1
   const length = arr.length - 1;
   let sorting = true;
+  // while sorting is true 
   while(sorting) {
-    while(itemTwo <= length && sorting == true) {
+    console.log("arr", arr, "one", itemOne, "two", itemTwo)
       if(arr[itemOne] > arr[itemTwo]) {
         [arr[itemOne], arr[itemTwo]] = [arr[itemTwo], arr[itemOne]]
-        sorting = true;
         itemOne += 1
         itemTwo += 1
+        console.log("arr itemOne", arr[itemOne])
+        console.log("arr itemTwo", arr[itemTwo])
+        sorting = true
       } else {
         itemOne += 1
         itemTwo += 1
-        sorting = false
       }
-    }
   }
   return arr;
 
